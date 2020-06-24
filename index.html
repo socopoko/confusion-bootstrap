@@ -35,7 +35,7 @@
                             Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a href="" data-toggle="modal" data-target="#loginModal">
+                    <a id="loginButton">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -157,7 +157,7 @@
                     <img src="img/logo.png" class="img-fluid c" alt="" >
                 </div>
                 <div class="col-12 col-sm-3 align-self-center text-center">
-                    <a role="button" href="" class="btn btn-sm btn-block btn-warning" data-toggle="modal" data-target="#reserveModal">Reserve Table</a>                   
+                    <button class="btn btn-sm btn-block btn-warning" id="reserveButton">Reserve Table</button>                   
                 </div>
             </div>
         </div>
@@ -332,5 +332,14 @@
                 $("#carouselButton").children("span").addClass('fa-pause');
             }
         });
+
+        $('#reserveButton').click(function() {
+            $('#reserveModal').modal('toggle');
+        });
+
+        $('#loginButton').click(function() {
+            $('#loginModal').modal('toggle');
+        });
+        
     </script>
 </html>
